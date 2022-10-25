@@ -1,0 +1,28 @@
+{
+    "name": "primitive-svg",
+    "version": "0.0.1",
+    "description": "Primitive SVG library",
+    "repository": {
+        "url": "https://github.com/kldtz/primitive-svg",
+        "type": "git"
+    },
+    "homepage": "https://github.com/kldtz/primitive-svg",
+    "main": "src/svg.js",
+    "files": [
+        "src/svg.js",
+        "src/la.js"
+    ],
+    "scripts": {
+        "test": "node test/test-runner.js ./test/*-test.js",
+        "lint": "eslint ."
+    },
+    "author": "Tobias Kolditz",
+    "license": "MIT",
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/kldtz/primitive-svg/issues"
+    },
+    "devDependencies": {
+        "eslint": "^8.6.0"
+    }
+}

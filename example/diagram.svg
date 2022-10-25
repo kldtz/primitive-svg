@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="310" width="310">
+    <style>
+    .triangle {
+        fill: goldenrod;
+        stroke: black;
+        stroke-width: 2px;
+    }
+
+    .label {
+        text-anchor: middle;
+        dominant-baseline: middle;
+    }
+
+    svg {
+        background-color: white;
+    }
+    </style>
+    <g>
+        <path class="triangle" d="M 5 5 L 185 5 5 125 z"></path>
+        <text class="label" x="20" y="65">a</text>
+        <text class="label" x="95" y="20">b</text>
+        <text class="label" x="110" y="80">c</text>
+    </g>
+    <g>
+        <path class="triangle" d="M 5 305 L 5.000000000000011 125 125 305 z"></path>
+        <text class="label" x="65" y="290">a</text>
+        <text class="label" x="20.000000000000007" y="215">b</text>
+        <text class="label" x="80.00000000000001" y="200">c</text>
+    </g>
+    <g>
+        <path class="triangle" d="M 305 305 L 125 305 305 185 z"></path>
+        <text class="label" x="290" y="245">a</text>
+        <text class="label" x="215" y="290">b</text>
+        <text class="label" x="200" y="230">c</text>
+    </g>
+    <g>
+        <path class="triangle" d="M 305 5 L 304.99999999999994 185 185 4.999999999999978 z"></path>
+        <text class="label" x="245" y="19.99999999999999">a</text>
+        <text class="label" x="290" y="95">b</text>
+        <text class="label" x="229.99999999999994" y="109.99999999999999">c</text>
+    </g>
+</svg>
