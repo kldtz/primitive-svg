@@ -1,7 +1,7 @@
 # Primitive SVG
 
 A primitive Javascript library for Scalable Vector Graphics in the sense that (a) it's a low-effort wrapper around SVG and (b) it gives you access to SVG 'primitives' without any abstraction.
-This is for people who like to write SVGs manually, but need to do some calculations beyond `calc` in CSS or just can't remember the attributes.
+This is for people who like to write SVGs manually, but need to do some calculations beyond `calc` in CSS or can't remember the attributes.
 
 * Wrapper around SVG with autocompletion for attributes in modern IDE (e.g. VSCode)
 * Vanilla JS, no dependencies, no transpiler. Just link the JS module.
@@ -92,6 +92,7 @@ Purely presentational attributes are defined separately via CSS.
 .label {
     text-anchor: middle;
     dominant-baseline: middle;
+    font-size: 16px;
 }
 
 svg {
