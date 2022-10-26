@@ -1,7 +1,6 @@
 class SVGElement {
-  constructor(tag, cls, attrs, content) {
+  constructor(tag, attrs, content) {
     this.tag = tag;
-    attrs["class"] = cls;
     this.attrs = Object.fromEntries(
       Object.entries(attrs)
         .filter(([_k, v]) => v !== undefined)
@@ -65,8 +64,18 @@ export function a(
 ) {
   return new SVGElement(
     "a",
-    cls,
-    { id, download, href, hreflang, referrerpolicy, rel, target, type, style },
+    {
+      class: cls,
+      id,
+      download,
+      href,
+      hreflang,
+      referrerpolicy,
+      rel,
+      target,
+      type,
+      style,
+    },
     content
   );
 }
@@ -74,14 +83,13 @@ export function a(
 export function circle({ id, cls, cx, cy, r, pathLength, style }, content) {
   return new SVGElement(
     "circle",
-    cls,
-    { id, cx, cy, r, pathLength, style },
+    { class: cls, id, cx, cy, r, pathLength, style },
     content
   );
 }
 
 export function defs({ id, cls, style }, content) {
-  return new SVGElement("defs", cls, { id, style }, content);
+  return new SVGElement("defs", { class: cls, id, style }, content);
 }
 
 export function ellipse(
@@ -90,21 +98,19 @@ export function ellipse(
 ) {
   return new SVGElement(
     "ellipse",
-    cls,
-    { id, cx, cy, rx, ry, pathLength, style },
+    { class: cls, id, cx, cy, rx, ry, pathLength, style },
     content
   );
 }
 
 export function g({ id, cls, style }, content) {
-  return new SVGElement("g", cls, { id, style }, content);
+  return new SVGElement("g", { class: cls, id, style }, content);
 }
 
 export function line({ id, cls, x1, x2, y1, y2, pathLength, style }, content) {
   return new SVGElement(
     "line",
-    cls,
-    { id, x1, x2, y1, y2, pathLength, style },
+    { class: cls, id, x1, x2, y1, y2, pathLength, style },
     content
   );
 }
@@ -127,8 +133,8 @@ export function marker(
 ) {
   return new SVGElement(
     "marker",
-    cls,
     {
+      class: cls,
       id,
       markerHeight,
       markerUnits,
@@ -145,14 +151,17 @@ export function marker(
 }
 
 export function path({ id, cls, d, pathLength, style }, content) {
-  return new SVGElement("path", cls, { id, d, pathLength, style }, content);
+  return new SVGElement(
+    "path",
+    { class: cls, id, d, pathLength, style },
+    content
+  );
 }
 
 export function polygon({ id, cls, points, pathLength, style }, content) {
   return new SVGElement(
     "polygon",
-    cls,
-    { id, points, pathLength, style },
+    { class: cls, id, points, pathLength, style },
     content
   );
 }
@@ -160,8 +169,7 @@ export function polygon({ id, cls, points, pathLength, style }, content) {
 export function polyline({ id, cls, points, pathLength, style }, content) {
   return new SVGElement(
     "polyline",
-    cls,
-    { id, points, pathLength, style },
+    { class: cls, id, points, pathLength, style },
     content
   );
 }
@@ -172,8 +180,7 @@ export function rect(
 ) {
   return new SVGElement(
     "rect",
-    cls,
-    { id, x, y, width, height, rx, ry, pathLength, style },
+    { class: cls, id, x, y, width, height, rx, ry, pathLength, style },
     content
   );
 }
@@ -196,8 +203,8 @@ export function svg(
 ) {
   return new SVGElement(
     "svg",
-    cls,
     {
+      class: cls,
       id,
       height,
       preserveAspectRatio,
@@ -219,8 +226,7 @@ export function text(
 ) {
   return new SVGElement(
     "text",
-    cls,
-    { id, x, y, dx, dy, rotate, lengthAdjust, textLength, style },
+    { class: cls, id, x, y, dx, dy, rotate, lengthAdjust, textLength, style },
     content
   );
 }
@@ -241,8 +247,17 @@ export function textPath(
 ) {
   return new SVGElement(
     "textPath",
-    cls,
-    { id, href, lengthAdjust, method, spacing, startOffset, textLength, style },
+    {
+      class: cls,
+      id,
+      href,
+      lengthAdjust,
+      method,
+      spacing,
+      startOffset,
+      textLength,
+      style,
+    },
     content
   );
 }
@@ -253,12 +268,15 @@ export function tspan(
 ) {
   return new SVGElement(
     "tspan",
-    cls,
-    { id, x, y, dx, dy, rotate, lengthAdjust, textLength, style },
+    { class: cls, id, x, y, dx, dy, rotate, lengthAdjust, textLength, style },
     content
   );
 }
 
 export function use({ id, cls, href, x, y, width, height, style }, content) {
-  return use("use", cls, { id, href, x, y, width, height, style }, content);
+  return use(
+    "use",
+    { class: cls, id, href, x, y, width, height, style },
+    content
+  );
 }
