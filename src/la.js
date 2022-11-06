@@ -53,7 +53,7 @@ class Vec {
   }
 
   /**
-   * Counterclockwise rotation.
+   * Counterclockwise rotation (for positive angles).
    * @param {number} angle 
    * @returns {Vec}
    */

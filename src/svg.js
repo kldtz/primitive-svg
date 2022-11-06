@@ -9,6 +9,10 @@ class SVGElement {
     this.content = content;
   }
 
+  /**
+   * Converts SVG definition to HTMLElement.
+   * @returns {HTMLElement}
+   */
   toElement() {
     const element = document.createElementNS(
       "http://www.w3.org/2000/svg",
@@ -32,6 +36,10 @@ class SVGElement {
     return element;
   }
 
+  /**
+   * Converts SVG definition to HTML string.
+   * @returns {string}
+   */
   toString() {
     const attrs = Object.entries(this.attrs)
       .sort()
