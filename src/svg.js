@@ -270,6 +270,10 @@ export function textPath(
   );
 }
 
+export function title({ id, cls, style }, content) {
+  return new SVGElement("title", { class: cls, id, style }, content);
+}
+
 export function tspan(
   { id, cls, x, y, dx, dy, rotate, lengthAdjust, textLength, style },
   content
